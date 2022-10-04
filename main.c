@@ -5,19 +5,27 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a, i, sum;
-	sum=0;
+	int a, b;
+	char c;
 	
-	printf("input a number: ");
-	scanf("%d", &a);
+	printf("enter the calculation: ");
+	scanf("%d %c %d", &a, &c, &b);
 	
-	for(i=1;i<=a;i++){
-		sum=sum+i;
+	switch(c){
+		case 42:
+			printf("%d",a*b);
+			break;
+		case 43:
+			printf("%d",a+b);
+			break;
+		case 45:
+			printf("%d",a-b);
+			break;
+		case 47:
+			printf("%d",a/b);//문자형을 int(정수)로 받았기 때문에 소수값이 나오지 않는다. 
+			break;
 	}
-	
-			
-	printf("the result is %d", sum);
-	
+
 
 	return 0;
 }
