@@ -5,27 +5,24 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a, b;
-	char c;
-	
-	printf("enter the calculation: ");
-	scanf("%d %c %d", &a, &c, &b);
-	
-	switch(c){
-		case 42:
-			printf("%d",a*b);
-			break;
-		case 43:
-			printf("%d",a+b);
-			break;
-		case 45:
-			printf("%d",a-b);
-			break;
-		case 47:
-			printf("%d",a/b);//문자형을 int(정수)로 받았기 때문에 소수값이 나오지 않는다. 
-			break;
+	int a, b, c;
+	c=0;
+	a=59;
+	 
+	do{
+		c++;
+		printf("guess a number: ");
+		scanf("%d", &b);
+		if(b==a)
+			printf("congratulation!\ntrial: %d", c);
+		else if(b>a)
+			printf("high!\n");
+		else
+			printf("low!\n");
 	}
-
-
+	while(b!=a);	
+	
+		
+	
 	return 0;
 }
