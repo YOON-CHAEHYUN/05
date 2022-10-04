@@ -5,15 +5,17 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a;
+	int a=0;
+	char c;
 	
-	printf("정수를 하나 입력하시오: ");
-	scanf("%d", &a);
+	printf("input a string: ");
 	
-	if (a>=0)
-		printf("절대값은 %d 입니다.", a);
-	else
-		printf("절대값은 %d 입니다.", -a); 
+	while ((c=getchar())!='\n')
+		if(c>=48&&c<=57)
+			a++;
+			
+	printf("the number of digits is %d", a);
+	
 	
 	return 0;
 }
